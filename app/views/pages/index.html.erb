@@ -1,0 +1,13 @@
+<h1>Blog Pages</h1>
+
+<% @pages.each do |page| %>
+<p>
+    <%= link_to page.title, "/pages/#{page.id}" %>
+    <% # Alternatively...  page_path(page) for the second part %>
+</p>
+<p>
+    <%= page.body %>
+</p>
+
+<% end %>
+<%= link_to 'New Page', :create_new_page %>
